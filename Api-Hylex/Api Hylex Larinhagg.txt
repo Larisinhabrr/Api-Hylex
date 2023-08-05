@@ -1,0 +1,27 @@
+-- Crie um dicionário vazio para guardar as funções da API
+local api = {}
+
+-- Aqui você adiciona as funções da API que quiser, por exemplo:
+function api.saudacao(nome)
+    return "Olá, " .. nome .. "!"
+end
+
+function api.soma(a, b)
+    return a + b
+end
+
+-- E por aí vai... adicione as funções que quiser!
+
+-- Agora, você precisa retornar o dicionário com as funções no final do script
+
+return api
+
+-- Requer a API criada no outro script
+local api = require(game.ServerScriptService.NomeDoScriptQueContemAPI)
+
+-- Agora você pode usar as funções da API:
+local resultadoSaudacao = api.saudacao("amigo")
+print(resultadoSaudacao) -- Isso vai imprimir "Olá, amigo!"
+
+local resultadoSoma = api.soma(10, 5)
+print(resultadoSoma) -- Vai imprimir "15"
